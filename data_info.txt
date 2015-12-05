@@ -1,0 +1,18 @@
+train_users.csv & test_users.csv
+  - Both contain information about the users in question
+  - KEY: id
+  - PREDICTING: country_destination
+
+sessions.csv
+  - Session info for all users
+  - KEY: user_id
+  - Join with 'user_id' here with 'id' in train_users.csv & test_users.csv
+
+countries.csv
+  - summary stats on the destination countries
+
+age_gender_bkts.csv
+  - summary stats of users' age group, gender, country of destination
+
+sample_submission.csv
+  - correct format for submitting predictions
