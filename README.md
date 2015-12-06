@@ -10,6 +10,8 @@ requisite CSVs for predictions.
 Will look at just the train_users.csv features. No other features will be extrapolated
 for predictions.
 
+#### 
+
 ### Prototypes Beta
 Will look at the train_users.csv features along with their sessions history. Might be
 over complicated, will likely have to look at truncating down information.

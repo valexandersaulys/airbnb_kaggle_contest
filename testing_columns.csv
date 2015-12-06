@@ -1,0 +1,107 @@
+,0
+0,id
+1,date_account_created
+2,timestamp_first_active
+3,date_first_booking
+4,-unknown-
+5,FEMALE
+6,MALE
+7,OTHER
+8,age
+9,basic
+10,facebook
+11,google
+12,signup_flow
+13,ca
+14,cs
+15,da
+16,de
+17,el
+18,en
+19,es
+20,fi
+21,fr
+22,hu
+23,id.1
+24,it
+25,ja
+26,ko
+27,nl
+28,no
+29,pl
+30,pt
+31,ru
+32,sv
+33,th
+34,tr
+35,zh
+36,api
+37,content
+38,direct
+39,other
+40,remarketing
+41,sem-brand
+42,sem-non-brand
+43,seo
+44,baidu
+45,bing
+46,craigslist
+47,direct.1
+48,email-marketing
+49,facebook.1
+50,facebook-open-graph
+51,google.1
+52,gsp
+53,meetup
+54,naver
+55,other.1
+56,padmapper
+57,yahoo
+58,yandex
+59,linked
+60,local ops
+61,marketing
+62,omg
+63,product
+64,tracked-other
+65,untracked
+66,Android
+67,Moweb
+68,Web
+69,iOS
+70,Android Phone
+71,Android Tablet
+72,Desktop (Other)
+73,Mac Desktop
+74,Other/Unknown
+75,SmartPhone (Other)
+76,Windows Desktop
+77,iPad
+78,iPhone
+79,-unknown-.1
+80,AOL Explorer
+81,Android Browser
+82,Apple Mail
+83,Avant Browser
+84,BlackBerry Browser
+85,Chrome
+86,Chrome Mobile
+87,Chromium
+88,CoolNovo
+89,Firefox
+90,IE
+91,IE Mobile
+92,IceWeasel
+93,Iron
+94,Maxthon
+95,Mobile Firefox
+96,Mobile Safari
+97,Opera
+98,Pale Moon
+99,RockMelt
+100,Safari
+101,Silk
+102,SiteKiosk
+103,Sogou Explorer
+104,TheWorld Browser
+105,Yandex.Browser
