@@ -1,0 +1,4 @@
+#!/home/vincent/workspace/kaggle_projects/airbnb_user_bookings/venv/bin/python
+# EASY-INSTALL-SCRIPT: 'Theano==0.7.0','theano-test'
+__requires__ = 'Theano==0.7.0'
+__import__('pkg_resources').run_script('Theano==0.7.0', 'theano-test')

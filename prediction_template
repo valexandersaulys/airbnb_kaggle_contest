@@ -1,0 +1,13 @@
+# Run Predictions
+from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score
+y_preds = clf.predict(x_valid)
+print( confusion_matrix(y_valid,y_preds) );
+print( "Accuracy: %f" % (accuracy_score(y_valid,y_preds)) );
+print( "Precision: %f" % (precision_score(y_valid,y_preds)) );
+print( "Recall: %f" % (recall_score(y_valid,y_preds)) );
+f = open('gradientBoost_take7.txt', 'w')
+f.write( str(confusion_matrix(y_valid,y_preds)) );
+f.write( "\nAccuracy: %f" % (accuracy_score(y_valid,y_preds)) );
+f.write( "\nPrecision: %f" % (precision_score(y_valid,y_preds)) );
+f.write( "\nRecall: %f" % (recall_score(y_valid,y_preds)) );
+f.write( "\nclf = GradientBoostingClassifier(n_estimators=1000,verbose=100)");

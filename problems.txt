@@ -22,3 +22,7 @@ array(['-unknown-', 'FEMALE', 'MALE', 'OTHER'], dtype=object)
 array(['basic', 'facebook'], dtype=object)
 >>> np.unique(tf['signup_method'])
 array(['basic', 'facebook', 'google'], dtype=object)
+
+So no 'google' signup method in the training set ...
+  * only 555 members in the test set that are signed up via google
+  * I guess I could just drop that column...but this will have to be done at an earlier point

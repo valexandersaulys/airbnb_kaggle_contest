@@ -1,5 +1,10 @@
 # Introduction
 
+## TO-DO
+- Move all my mlp crap in ./prototype_alpha/ to its own folder (in general a good idea to start segregating)
+- Try using committee-voting style (use Pandas to pick the most counted value for a given row, put into its own object?)
+- Create totebag(!)
+
 ## General Direction
 I decided to try something different for this and implement a type of templating
 system. This way I can see changes as they occur and have perfect records of
@@ -8,14 +13,16 @@ requisite CSVs for predictions.
 
 ### Prototypes Alpha
 Will look at just the train_users.csv features. No other features will be extrapolated
-for predictions.
+for predictions. Also will only predict one, will move on to using probabilities to guess
+two different destinations later.
 
-#### 
+I am currently having issues as the neural networks I'm attempting to train get "stuck"
+after only a round or two. My other methods (mostly from scikit) are ok, but fairly mediocre
+in performance.
+
 
 ### Prototypes Beta
-Will look at the train_users.csv features along with their sessions history. Might be
-over complicated, will likely have to look at truncating down information.
-
+Dimensionality Reduction into two components. Try methods on this.
 
 ## CSV files and my observations
 

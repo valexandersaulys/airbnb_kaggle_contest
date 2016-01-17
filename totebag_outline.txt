@@ -1,0 +1,15 @@
+Totebag
+-------
+  * highly efficient way of committee voting in python
+  * add an infinite amount of models (all classification)
+  * take the most recurring vote
+
+Later:
+  * expand to regressive models (like through averaging)
+  * ability to take into consideration the probability outputs (don't know how to do)
+
+Basic Idea:
+  - Add potential models via .add_model() function
+  - this appends them to a list
+  - at .fit() time, iterate over the list and fit each model, put back into a new list
+  - at .predict() time, iterate over all fitted models in list, get predictions, return most common prediction
