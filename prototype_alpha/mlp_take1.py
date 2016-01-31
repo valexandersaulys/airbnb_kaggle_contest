@@ -2,7 +2,6 @@
 First attempt at neural network. 
 
 classes for target variables is done via pd.get_dummies()
-
 """
 import pandas as pd
 import numpy as np
@@ -25,14 +24,14 @@ classes = len(np.unique(y_train.values).tolist()); # Get the number of classes
 y_train = pd.get_dummies(y_train,dummy_na=False); # convert with pd.get_dummies()
 
 clf = Sequential()
-clf.add( Dense(12000, input_dim=x_train.shape[1], init='uniform') )
+clf.add( Dense(10000, input_dim=x_train.shape[1], init='uniform') )
 clf.add( Activation('sigmoid') );  #'sigmoid', 'tanh' too
 clf.add( Dense(classes) );  # I think its one per country
 clf.add( Activation('softmax') );
-sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
-#agd = Adagrad(lr=0.01, epsilon=1e-6);
-clf.compile(loss="categorical_crossentropy",optimizer=sgd);
-clf.fit(x_train.values,y_train.values,batch_size=128,nb_epoch=25)
+#sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+agd = Adagrad(lr=0.01, epsilon=1e-6);
+clf.compile(loss="categorical_crossentropy",optimizer=agd);
+clf.fit(x_train.values,y_train.values,batch_size=128,nb_epoch=100)
 
 
 # Run Predictions
