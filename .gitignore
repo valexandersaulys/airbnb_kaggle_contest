@@ -1,9 +1,3 @@
-age_gender_bkts.csv
-countries.csv
-protoAlpha_testing.csv
-protoAlpha_training.csv
-sample_submission_NDF.csv
-sessions.csv
-test_users.csv
-train_users_2.csv
 venv/*
+raw_data/*
+*/*.csv
