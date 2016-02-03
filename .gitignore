@@ -1,3 +1,5 @@
 venv/*
 raw_data/*
 */*.csv
+prototype_alpha/*.csv
+prototype_beta/*.csv
