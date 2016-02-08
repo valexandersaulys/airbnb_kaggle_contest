@@ -4,5 +4,3 @@ raw_data/*
 prototype_alpha/*.csv
 prototype_beta/*.csv
 .Rproj.user
-*.model
-*/*.model

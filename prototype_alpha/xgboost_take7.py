@@ -30,18 +30,18 @@ param = {}
 # use softmax multi-class classification
 param['objective'] = 'multi:softmax'  # can be 'multi:softmax' or 'multi:softprob'
 # scale weight of positive examples
-param['eta'] = 0.99
-param['max_depth'] = 250
+param['eta'] = 0.9
+param['max_depth'] = 100
 param['gamma'] = 0.1
 param['silent'] = 0   # 1 means silent mode
-param['nthread'] = 8
+param['nthread'] = 5
 param['num_class'] = len(np.unique(y_train).tolist());
-param['booster'] = 'gblinear'  # default is 'gbtree'
+param['booster'] = 'gbtree'  # default is 'gbtree'
 param['subsample'] = 1.0  # default is 1.0
 param['base_score'] = 0.5   # default is 0.5
 
 # Train & Get validation data
-num_round = 1000
+num_round = 10
 clf = xgb.train(param, xg_train, num_round);
 #clf = xgb.cv(param, xg_train, num_round);
 
@@ -53,10 +53,10 @@ y_preds = clf.predict( xg_valid );
 from sklearn.metrics import confusion_matrix, accuracy_score
 print( confusion_matrix(y_valid,y_preds) );
 print( "Accuracy: %f" % (accuracy_score(y_valid,y_preds)) );
-f = open('xgboost_take4.txt', 'w')
+f = open('xgboost_take7.txt', 'w')
 f.write( str(confusion_matrix(y_valid,y_preds)) );
 f.write( "\nAccuracy: %f" % (accuracy_score(y_valid,y_preds)) );
-f.write( "\nclf = xgboost{1000 rounds, 0.9 eta, 0.1 gamma, 25 max_depth}" );
+f.write( str(param) );
 
 # Now on to final submission
 xg_test = xgb.DMatrix(testing.iloc[:,1:].values);
@@ -65,8 +65,8 @@ y_final = pd.DataFrame(y_final);
 numbahs = testing['id']
 df = pd.concat([numbahs,y_final],axis=1)
 df.columns = ['id','country']
-df.to_csv("xgboost_take4.csv",index=False)
+df.to_csv("xgboost_take7.csv",index=False)
 
 # Save model
-clf.save_model('xgb_take4.model');
+clf.save_model('xgb_take7.model');
 
